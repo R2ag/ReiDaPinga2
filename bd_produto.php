@@ -115,7 +115,7 @@ function P_Detalhar( $p_Conexao, $p_XP_Produto )
         $detalhes .= '<h3>' . $registro['P_Nome'] . '</h3>';
         $detalhes .= $registro['P_Descricao']."<br>";  
         $detalhes .= "R$ ".$registro['P_Preco']."<br>";  
-        $detalhes .= "<a href='bd_encomenda.php?produto=".$registro['XP_Produto']."'> Comprar </a>";  
+        $detalhes .= "<a href='cad_encomenda.php?produto=".$registro['XP_Produto']."'> Comprar </a>";  
         $detalhes .= "</td>";
 
         $detalhes .= "<td>";

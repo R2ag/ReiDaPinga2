@@ -99,6 +99,7 @@ function C_Login( $p_Mensagem )
 }
 
 // **************************************************************************************
+/*
 function C_Autorizar( $p_Conexao, $p_Login, $p_Senha )
 {
     $XP_Cliente = 0;
@@ -124,7 +125,30 @@ function C_Autorizar( $p_Conexao, $p_Login, $p_Senha )
     
     return ( $XP_Cliente ); 
 }
+*/
 
+function C_Autorizar( $p_Conexao, $p_Login, $p_Senha )
+{
+    $sql = "select * from Cliente where C_Email = :login and C_Senha = :senha;";
+    //
+    $comando = $p_Conexao->prepare($sql);
+    $comando->bindValue(':login', $p_Login, SQLITE3_TEXT);
+    $comando->bindValue(':senha', $p_Senha, SQLITE3_TEXT);
+    $comando->execute();
+
+    $REGISTROS = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+   if ( count($REGISTROS) == 1 )
+    {
+        $registro = $REGISTROS[0];
+        if ( array_key_exists( "XP_Cliente", $registro ) )
+        {
+            $XP_Cliente = $registro["XP_Cliente"];
+        }
+    }
+   
+    return ( $XP_Cliente );
+}
 // **************************************************************************************
 function nao_repete_email( $p_Conexao, $p_Login)
 {

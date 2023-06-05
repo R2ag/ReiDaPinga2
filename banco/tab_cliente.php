@@ -2,7 +2,7 @@
 include_once "../doc_HTML.php";
 
 try {
-  $db = new PDO('sqlite:lojaRMS.sqlite');
+  $db = new PDO('sqlite:lojaRDP.sqlite');
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     $res = $db->exec(

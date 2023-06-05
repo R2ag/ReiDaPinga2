@@ -1,17 +1,17 @@
 <?php
-    //include_once 'sessao.php';
+    include_once 'sessao.php';
 
     include_once "controle_bd.php";
     include_once "doc_HTML.php";
     include_once "bd_encomenda.php";
 
     $conteudo = "";
-    if ( count($_POST) > 0 )
+    if ( count($_GET) > 0 )
     {
         $BD = BD_Conectar();
-        $mensagem = C_Inserir( $BD, $_POST );
+        $mensagem = E_Inserir( $BD, $_GET );
         BD_Desconectar( $BD );
-         $conteudo .= "Encomenda feita com sucesso!";
+        $conteudo .= "Encomenda feita com sucesso!";
     }
     else
     {

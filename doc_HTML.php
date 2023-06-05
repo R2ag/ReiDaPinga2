@@ -1,4 +1,5 @@
 <?php
+    include "bd_encomenda.php";
 
     // #########################
     // 2º) Programa:
@@ -81,8 +82,16 @@
             {
                 $cor = ( $p_Origem=="" ? 'vermelho' : ($p_Origem==$arquivo ? "verde" : "amarelo") );
 
-                $contador = ( $link == "🛒 Compras" ? "&nbsp;<span id='cont_encomenda'>0</span>" : "" );
-                $menu .= "<a class='menu ".$cor."' href='".$arquivo."'>".$link.$contador."</a>";
+                $contador = "";
+                if ( $link == "🛒 Compras" )
+                {
+                    $contador .= "&nbsp;<span id='cont_encomenda'>";
+                    //$contador .= E_Quant_Encomendas();
+                    $contador .= "</span>";
+                }
+                
+                $xp_cliente =  ( $link == "🛃 Login" ? "<br>".$_SESSION['SES_Login'] : "" );
+                $menu .= "<a class='menu ".$cor."' href='".$arquivo."'>".$link.$contador.$xp_cliente."</a>";
             }
             $menu .= "</center><br><br>";
             
