@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import classes from "./Header.module.css";
-import AppContext from "./AppContext";
+import AppContext from "../AppContext";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -20,7 +19,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
           <a className="navbar-brand" href="/">
-            <span className={classes.imgLogo}><img src="../../assets/cerveja.png" alt="Logo Rei da Pinga"/></span>
+            <img src="/cerveja.png" alt="logo" />
             <span className="fs-3">Rei da Pinga</span>
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -30,7 +29,6 @@ const Header = () => {
             <div className="navbar-nav">
               <NavLink to="/" className="nav-link">Home</NavLink>
               <NavLink to="/produtos" className="nav-link">Produtos</NavLink>
-              <NavLink to="/compras" className="nav-link">Compras</NavLink>
               <NavLink to="/sobre" className="nav-link">Sobre</NavLink>
 
               <a href="#" className="nav-link" onClick={handleTemaClick}>

@@ -1,0 +1,44 @@
+{
+  "Produtos": [
+    {
+      "id": 1,
+      "nome": "Cachaça teimosinha",
+      "descricao": "Aguardente de cana, destilada em barril de carvalho",
+      "graduacao": 48.5,
+      "fabricacao": 2015,
+      "preco": 59.99
+    },
+    {
+      "id": 2,
+      "nome": "Cachaça Burarama",
+      "descricao": "Aguardente de cana, destilada em barril de carvalho",
+      "graduacao": 48.5,
+      "fabricacao": 2014,
+      "preco": 79.99
+    },
+    {
+      "id": 3,
+      "nome": "Cachaça Mula-Preta",
+      "descricao": "Aguardente de cana, destilada em barril de carvalho",
+      "graduacao": 45.5,
+      "fabricacao": 2010,
+      "preco": 159.99
+    },
+    {
+      "id": 4,
+      "nome": "Cachaça 51",
+      "descricao": "Aguardente de cana, destilada em barril de cobre",
+      "graduacao": 51,
+      "fabricacao": 2023,
+      "preco": 39.99
+    },
+    {
+      "id": 5,
+      "nome": "Cachaça Casa Velha",
+      "descricao": "Aguardente de cana, destilada em barril de carvalho",
+      "graduacao": 48.5,
+      "fabricacao": 2012,
+      "preco": 139.99
+    }
+  ]
+}

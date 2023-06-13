@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import FormButtons from "../FormButtons"
-import FormInput from "../FormInput"
+import FormButtons from "../forms/FormButtons"
+import FormInput from "../forms/FormInput"
 
 
 const Form = ({ handleSubmit, handleChange, errors, inputs }) => {
@@ -11,7 +11,7 @@ const Form = ({ handleSubmit, handleChange, errors, inputs }) => {
             <FormInput type="text" field="graduacao" label="Teor Alcoolico" placeholder="15.0%" error={errors?.graduacao} onChange={handleChange} value={inputs?.graduacao} />
             <FormInput type="text" field="fabricacao" label="Ano de Fabricação" placeholder="1997" error={errors?.fabricacao} onChange={handleChange} value={inputs?.fabricacao} />
             <FormInput type="text" field="preco" label="Preço" placeholder="49.9" error={errors?.preco} onChange={handleChange} value={inputs?.preco} />
-            <FormButtons cancelTarget="/alunos" />
+            <FormButtons cancelTarget="/produtos" />
         </form>
     )
 }
